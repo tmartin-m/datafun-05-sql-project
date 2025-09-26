@@ -11,21 +11,32 @@ DROP TABLE IF EXISTS nhl_teams;
 -- Note that the nhl_teams table has no foreign keys, so it is a standalone table
 
 CREATE TABLE nhl_teams (
-    author_id TEXT PRIMARY KEY,
-    first_name 
-    last_name TEXT,
-    year_born INTEGER
+    TEAM_ID TEXT PRIMARY KEY,
+    TEAM TEXT,
+    GAMES_PLAYED INTEGER,
+    WINS INTEGER,
+    LOSSES INTEGER,
+    POINTS INTEGER,
+    GOALS_FOR INTEGER,
+    GOALS_AGAINST INTEGER
 );
 
--- Create the books table
--- Note that the books table has a foreign key to the authors table
--- This means that the books table is dependent on the authors table
--- Be sure to create the standalone authors table BEFORE creating the books table.
+-- Create the nhl_players table
+-- Note that the nhl_players table has a foreign key to the nhl_teams table
+-- This means that the nhl_players table is dependent on the nhl_teams table
+-- Be sure to create the standalone nhl_teams table BEFORE creating the nhl_players table.
 
-CREATE TABLE books (
-    book_id TEXT PRIMARY KEY,
-    title TEXT,
-    year_published INTEGER,
-    author_id TEXT,
-    FOREIGN KEY (author_id) REFERENCES authors(author_id)
+CREATE TABLE nhl_players (
+    PLAYER TEXT PRIMARY KEY,
+    SKATER_SHOOTS TEXT,
+    POSITION TEXT,
+    GAMES_PLAYED INTEGER,
+    GOALS INTEGER,
+    ASSISTS INTEGER,
+    POINTS INTERGER,
+    PENALTY_MINUTES INTEGER,
+    SHOTS INTEGER,
+    SHOOTING_PERCENTAGE INTEGER,
+    TEAM_ID TEXT,
+    FOREIGN KEY (TEAM_ID) REFERENCES nhl_teams(TEAM_ID)
 );

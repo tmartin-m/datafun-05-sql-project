@@ -33,15 +33,15 @@ def insert_data_from_csv():
     """Function to use pandas to read data from CSV files (in 'data' folder)
     and insert the records into their respective tables."""
     try:
-        teams_data_path = pathlib.Path("data", "nhl_teams.csv")
-        players_data_path = pathlib.Path("data", "nhl_players.csv")
-        teams_df = pd.read_csv(teams_data_path)
-        players_df = pd.read_csv(players_data_path)
+        nhl_teams_data_path = pathlib.Path("data", "nhl_teams.csv")
+        nhl_players_data_path = pathlib.Path("data", "nhl_players.csv")
+        nhl_teams_df = pd.read_csv(nhl_teams_data_path)
+        nhl_players_df = pd.read_csv(nhl_players_data_path)
         with sqlite3.connect(db_file) as conn:
             # use the pandas DataFrame to_sql() method to insert data
             # pass in the table name and the connection
-            teams_df.to_sql("teams", conn, if_exists="replace", index=False)
-            players_df.to_sql("players", conn, if_exists="replace", index=False)
+            nhl_teams_df.to_sql("nhl_teams", conn, if_exists="replace", index=False)
+            nhl_players_df.to_sql("nhl_players", conn, if_exists="replace", index=False)
             print("Data inserted successfully.")
     except (sqlite3.Error, pd.errors.EmptyDataError, FileNotFoundError) as e:
         print("Error inserting data:", e)
