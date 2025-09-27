@@ -1,21 +1,17 @@
 -- Insert teams data
 INSERT INTO nhl_teams (TEAM_ID,TEAM,GAMES_PLAYED,WINS,LOSSES,POINTS,GOALS_FOR,GOALS_AGAINST)
 VALUES
-    ('WPG','Winnipeg Jets',82,56,22,116,275,190),
-    ('WSH','Washington Capitals',82,51,22,111,286,229),
-    ('VGK','Vegas Golden Knights',82,50,22,110,274,214),
-    ('TOR','Toronto Maple Leafs',82,52,26,108,267,229),
-    ('DAL','Dallas Stars',82,50,26,106,275,222),
-    ('LAK','Los Angeles Kings',82,48,25,105,249,203),
-    ('COL','Colorado Avalanche',82,49,29,102,273,231),
     ('TBL','Tampa Bay Lightning',82,47,27,102,292,216),
     ('EDM','Edmonton Oilers',82,48,29,101,259,235),
-    ('CAR','Carolina Hurricanes',82,47,30,99,266,230),
-    ('FLA','Florida Panthers',82,47,31,98,246,223),
-    ('OTT','Ottawa Senators',82,45,30,97,242,232),
-    ('MIN','Minnesota Wild',82,45,30,97,225,236),
-    ('STL','St. Louis Blues',82,44,30,96,250,231),
-    ('CGY','Calgary Flames',82,41,27,96,220,236);
+    ('BOS','Boston Bruins',82,33,39,76,222,271),
+    ('TOR','Toronto Maple Leafs',82,52,26,108,267,229),
+    ('WPG','Winnipeg Jets',82,56,22,116,275,190),
+    ('VGK','Vegas Golden Knights',82,50,22,110,274,214),
+    ('COL','Colorado Avalanche',82,49,29,102,273,231),
+    ('PIT','Pittsburgh Penguins',82,34,36,80,242,287),
+    ('UTA','Utah Hockey Club',82,38,31,89,240,247),
+    ('NYR','New York Rangers',82,39,36,85,255,255),
+    ('MTL','Montréal Canadiens',82,40,31,91,243,261);
 
 -- Insert players data
 INSERT INTO nhl_players (PLAYER,SKATER_SHOOTS,POSITION,GAMES_PLAYED,GOALS,ASSISTS,POINTS,PENALTY_MINUTES,SHOTS,SHOOTING_PERCENTAGE,TEAM_ID)
