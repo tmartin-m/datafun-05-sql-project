@@ -1,6 +1,6 @@
 # datafun-05-sql-project
 
-![Alt text]("C:\Users\tmmar\OneDrive\Pictures\NHL-Logo.png")
+![Alt text]("[C:\Users\tmmar\OneDrive\Pictures\NHL-Logo.png](https://1000logos.net/wp-content/uploads/2017/05/NHL-Logo-768x512.png)")
 
 # Machine Setup
 https://github.com/denisecase/pro-analytics-01/blob/main/01-machine-setup/MACHINE-SETUP.md
