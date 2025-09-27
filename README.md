@@ -153,10 +153,10 @@ https://github.com/denisecase/datafun-05-spec
 7. 📊 Visualizations
 
 ### Average Penalty Minutes by Position
-![Average Penalty Minutes](avg_penalty_minutes_by_position.png)
+![Average Penalty Minutes](plots/avg_penalty_minutes_by_position.png)
 
 ### Points Summary by Position
-![Points Summary](points_summary_by_position.png)
+![Points Summary](plots/points_summary_by_position.png)
 
 
 
