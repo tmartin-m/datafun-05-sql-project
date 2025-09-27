@@ -1,5 +1,7 @@
 # datafun-05-sql-project
 
+![Alt text]("C:\Users\tmmar\OneDrive\Pictures\NHL-Logo.png")
+
 # Machine Setup
 https://github.com/denisecase/pro-analytics-01/blob/main/01-machine-setup/MACHINE-SETUP.md
 

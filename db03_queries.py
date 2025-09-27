@@ -1,6 +1,7 @@
 # -------------------------------------------------
 # Imports
 # -------------------------------------------------
+import os
 import sqlite3
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -10,6 +11,12 @@ import matplotlib.pyplot as plt
 # -------------------------------------------------
 # Replace with your database path or connection string
 conn = sqlite3.connect("project.sqlite3")  
+
+# -------------------------------------------------
+# Make sure output folder exists
+# -------------------------------------------------
+output_dir = "plots"
+os.makedirs(output_dir, exist_ok=True)
 
 # -------------------------------------------------
 # Helper function to run queries and return DataFrame
@@ -70,7 +77,7 @@ df_sorted_players = run_query("SELECT * FROM nhl_players ORDER BY POINTS;")
 print("\nPlayers Sorted by Points:\n", df_sorted_players.head())
 
 # -------------------------------------------------
-# Visualization Examples
+# Visualization Examples (Saved to Plots Folder)
 # -------------------------------------------------
 
 # Average penalty minutes by position
@@ -78,22 +85,27 @@ df_penalties.plot(kind="bar", x="POSITION", y="avg_penalty_minutes", legend=Fals
 plt.title("Average Penalty Minutes by Position")
 plt.ylabel("Avg Penalty Minutes")
 plt.xlabel("Position")
-plt.show()
+plt.tight_layout()
+plt.savefig(os.path.join(output_dir, "avg_penalty_minutes_by_position.png"))
+plt.close()
 
 # Total vs. average points by position
 df_points_by_pos.plot(kind="bar", x="POSITION")
 plt.title("Total & Average Points by Position")
 plt.ylabel("Points")
-plt.show()
+plt.tight_layout()
+plt.savefig(os.path.join(output_dir, "points_by_position.png"))
+plt.close()
 
 # Distribution of points across players
 df_sorted_players["POINTS"].plot(kind="hist", bins=20, edgecolor="black")
 plt.title("Distribution of Player Points")
 plt.xlabel("Points")
-plt.show()
+plt.tight_layout()
+plt.savefig(os.path.join(output_dir, "points_distribution.png"))
+plt.close()
 
 # -------------------------------------------------
 # Close connection
 # -------------------------------------------------
 conn.close()
-
