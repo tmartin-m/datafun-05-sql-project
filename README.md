@@ -1,6 +1,6 @@
 # datafun-05-sql-project
 
-![NHL LOGO](C:\Users\tmmar\datafun-05-sql-project\nhl_logo.png)
+![NHL LOGO](nhl_logo.png)
 
 ## Overview
 This project demonstrates how to use Python and SQLite to analyze NHL player and team statistics using SQL queries. It includes data manipulation, aggregation, and visualization.
@@ -156,7 +156,7 @@ https://github.com/denisecase/datafun-05-spec
 ![Average Penalty Minutes](plots/avg_penalty_minutes_by_position.png)
 
 ### Points Summary by Position
-![Points Summary](plots/points_summary_by_position.png)
+![Points Summary](plots/points_by_position.png)
 
 
 
