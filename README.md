@@ -1,6 +1,8 @@
 # datafun-05-sql-project
 
-![Alt text]("[C:\Users\tmmar\OneDrive\Pictures\NHL-Logo.png](https://1000logos.net/wp-content/uploads/2017/05/NHL-Logo-768x512.png)")
+![Alt text](C:\Users\tmmar\datafun-05-sql-project\nhl_logo.png)
+
+### This project demonstrates how to use Python and SQLite to analyze NHL player and team statistics using SQL queries. It includes data manipulation, aggregation, and visualization.
 
 # Machine Setup
 https://github.com/denisecase/pro-analytics-01/blob/main/01-machine-setup/MACHINE-SETUP.md
